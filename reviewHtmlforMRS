@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Review Site </title>
+    <style>
+        legend {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form 
+            id="review"
+            onReset="handleOnreset()"
+            onSubmit="handleOnsubmit()"
+            name="form"
+            action= "/Review.js"
+            method="POST"
+
+        >
+            <fieldset>
+                <legend>영화리뷰작성</legend>
+                <p>
+                <label for="movieName">영화제목
+                <input type="text" id="movieName" name="movieName"
+                paceholder="영화제목" required></label>
+                </p>
+                <p>
+           
+                <label for="reviewText">리뷰 내용 
+                <textarea id="reviewText" name="reviewText" rows="5" cols="30" placeholder="리뷰 내용" required></textarea>
+                </label>
+                <button type="submit" >리뷰작성</button>
+                </p>
+            </fieldset>
+    </form>
+        
+    <form 
+            onReset="handleOnreset()" 
+            onSubmit="handleOnsubmit()" 
+            name="form" 
+            method="get" 
+            action="">
+
+        <fieldset>
+            <legend>영화 추천</legend>
+            <p>
+                <label for="recommendMovie">추천 영화
+                    <select id="recommendMovie" name="recommendMovie">
+                        <option value="movie1">영화 1</option>
+                        <option value="movie2">영화 2</option>
+                        <option value="movie3">영화 3</option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <label for="recommendationText">추천 사유
+                    <textarea id="recommendationText" name="recommendationText" rows="5" cols="30" placeholder="추천 사유를 입력하세요" required></textarea>
+                </label>
+                <button type="submit">추천하기</button>
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
