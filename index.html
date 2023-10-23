@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Review Site</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="button.css">
+        <!--리엑트 가져오기-->
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="MyButton.js"></script>
+        <script src="login.js"></script>
+        <script src="LoginForm.js"></script>
+        <script src="Login.js"></script>
+        <script src="SignInForm.js"></script>
+        <script src="Review.js"></script>
+        <script src="post.js"></script>
+        <script src="user.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="review.html">Movie Review</a></li>
+                </ul>
+            </nav>
+            
+            <h1 >Movie Review Site</h1>
+            
+            <div>
+                <h2>Elemental</h2>
+                <P>불,물,공기,흙 4대원소들이 살고 있는 <br>
+                엘리멘트 시티에서 불과 물의 사랑을 <br>
+                가족애에 담아 그려내고 있다. </P>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8SYO7yzO1LVWoMyVtB_VJRhMxoRQw1PqG2w&usqp=CAU"
+                    alt="영화포스트">
+                    
+            </div>
+        </header>
+        <div id="root"></div>
+        <script>
+            ReactDOM.render(<MyButton />, document.getElementById('root'));
+        </script>
+        <button class="button" id="getTimeButton" onClick="handleOnclick()">
+            CURRENT TIME
+        </button>
+        
+
+	<footer>
+        <p> 영화리뷰사이트 & Copyright; 2023. All Rights Reserved.</p>
+        <p> 문의: SEMAInstitute@gmail.com </p>
+        <p> 주소: 세종특별자치시 나성동 246 </p>
+        <p> 사업자등록번호: 000-00-00000 | 대표: LeeKH</p>
+	</footer>
+
+            <script>
+                function handleOnclick() {
+                    let today = new Date();
+                    let hours = today.getHours();
+                    let minutes = today.getMinutes();
+                    let seconds = today.getSeconds();
+
+                    window.alert("지금 시간은 "+hours+" 시 "+minutes+ " 분 "+seconds + " 초 ");
+                    
+                }
+                function handleOnfocus() {
+                    console.log('focus 이벤트 발생');
+                }
+
+                function handleOnblur() {
+                    console.log('blur 이벤트 발생')
+                }
+                
+                function handleOnchange () {
+                    console.log('change 이벤트 발생');
+                }
+                
+                function handleOnsubmit () {
+                    console.log('submit 이벤트 발생');
+                }
+
+                function handleOnreset () {
+                    console.log('reset 이벤트 발생');
+                }
+                
+                // 버튼에 onclick 이벤트를 연결
+                document.getElementById("getTimeButton").onclick = handleOnclick;
+            </script>
+         
+    </body>  
+</html>
